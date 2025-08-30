@@ -7,10 +7,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "tsc && node ./dist/index.js",
     "dev": "tsc && node dist/index.js",
     "aitest": "tsc && node dist/agents/index.js",
-    "datatest": "tsc && node dist/services/Stockservice.js"
+    "datatest": "tsc && node dist/services/Stockservice.js",
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
